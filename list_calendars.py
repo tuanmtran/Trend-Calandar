@@ -27,7 +27,5 @@ def main():
 
         service.calendars().insert(body=calendarT).execute()
 
-
-
 if __name__ == '__main__':
    main()
