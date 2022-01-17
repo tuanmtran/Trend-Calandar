@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from cal_setup import get_calendar_service
 
 
-def main():
+def main( color):
     # mark the entire day as a special event
     service = get_calendar_service()
 
@@ -33,7 +33,7 @@ def main():
                 'date': end,
                 'timeZone': 'America/Los_Angeles'
             },
-            'colorId': 11,
+            'colorId': color,
         }
     service.events().insert(calendarId=calID, body=event).execute()
 
